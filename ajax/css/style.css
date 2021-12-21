@@ -1,7 +1,6 @@
 
-
-h1 {
-    color: red;
+main {
+    background: #182d3d;
 }
 
 .card {
@@ -17,9 +16,24 @@ h1 {
     height: 100%;
 }
 
-.col-4 img {
+.cardd {
+    background-color: black;
+    text-align: center;
+
+}
+
+.cardd img {
     width: 150px;
 
+}
+
+.cardd ul {
+    list-style: none;
+    padding: 1rem;
+}
+
+.cardd ul li {
+    color: white;
 }
 
 .card-container {
@@ -38,3 +52,4 @@ header {
 header img {
     width: 50px;
 }
+
