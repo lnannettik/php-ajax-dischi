@@ -18,36 +18,30 @@ require __DIR__ . '/database.php';
 </head>
 <body>
 
-    <header>
-        <div class="img-container">yuyjmyitn
-            <img src="../logo.png" alt="spoty logo">
-        </div>
+    <header class="container-fluid p-3">
+        <img class="" src="../logo.png" alt="spoty logo">
     </header>
 
     <main>
 
-        <div class="container col-8 offset-2 d-flex">
+        <div class="container p-3">
 
-            <div class="row col-4 d-flex">
+            <div class="row">
 
-                <div class="card d-flex">
+                <?php foreach ($database as $item) { ?>
+                    <div class="col-4">
 
-                    <?php foreach ($database as $item) { ?>
+                        <div class="card-container mb-3 p-3">
 
-                        <!-- <div class="card"> -->
-
-                            <h3><?php echo $item['title']?></h3> <br>
-                            <p><?php echo $item['author']?></p><br> 
-                            <p><?php echo $item['year']?></p><br> 
                             <img src="<?php echo $item['poster']?>" alt=""><br> 
-                            <p><?php echo $item['genre']?></p><br>
+                            <h3><?php echo $item['title']?></h3> <br>
+                            <span class="d-block" ><?php echo $item['author']?></span>
+                            <span class="d-block" ><?php echo $item['year']?></span> 
+                            <span class="d-block" ><?php echo $item['genre']?></span>
                         
-                        <!-- </div> -->
-
-                    <?php } ?>
-
-            
-                </div>
+                        </div>
+                    </div>
+                <?php } ?>
 
         </div>
 

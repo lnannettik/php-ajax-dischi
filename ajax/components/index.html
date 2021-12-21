@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- VueJS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <title>Second</title>
+</head>
+
+<body>
+    
+    <div id="app">
+
+        <header class="container-fluid p-3">
+            <img class="" src="../logo.png" alt="spoty logo">
+        </header>
+    
+        <main>
+    
+            <div class="container p-3">
+    
+                <div class="row">
+    
+                        <div class="col-4">
+    
+                            <ul 
+                                v-for="(album, index) in albums"
+                                :key="`album-id-${index}`"
+                                class="card-container mb-3 p-3">
+
+                                <img :src="`${album.poster}`" alt="img">
+
+                                <li>{{ album.title }} </li>
+                                <li>{{ album.author }} </li>
+                                <li>{{ album.year }} </li>
+                                <li>{{ album.genre }} </li>
+
+
+
+    
+                                <!-- <img src="$item['poster']?>" alt="">
+                                <h3>$item['title']</h3>
+                                <span class="d-block" >$item['author']</span>
+                                <span class="d-block" >$item['year']</span> 
+                                <span class="d-block" >$item['genre']</span> -->
+                            
+                                </ul>
+                        </div>
+    
+            </div>
+    
+        </main>
+    
+    
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <h1>bregeretbgvewtvfte</h1>
+
+
+
+
+
+
+
+    
+    <!-- AXIOS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- JS -->
+    <script src="main.js"></script>
+
+</body>
+
+</html>
+
+
