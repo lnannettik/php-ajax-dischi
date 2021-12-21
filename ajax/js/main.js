@@ -15,11 +15,13 @@ const app = new Vue ({
     methods: {
         getAlbums() {
             axios
-                .get('http://localhost/php-intro/php-ajax-dischi/ajax/components/database.php')
+                .get('http://localhost/php-intro/php-ajax-dischi/ajax/php/database.php')
+
                 .then(response => {
                     console.log(response.data);
-                    this.users = response.data;
+                    this.albums = response.data;
                 })
+
                 .catch(err => {
                     console.log(err);
                 });

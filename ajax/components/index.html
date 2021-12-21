@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
     
@@ -29,63 +32,39 @@
     
                 <div class="row">
     
-                        <div class="col-4">
+                        <div 
+                            v-for="(album, index) in albums" 
+                            :key="`album-id${index}`" 
+                            class="col-4">
     
-                            <ul 
-                                v-for="(album, index) in albums"
-                                :key="`album-id-${index}`"
-                                class="card-container mb-3 p-3">
+                            <ul >
+                                <li>
+                                    <img :src= "album.poster" alt="album.title">
+                                </li>
 
-                                <img :src="`${album.poster}`" alt="img">
+                                <li> {{ album.title }} </li>
+                                <li> {{ album.author }} </li>
+                                <li> {{ album.year }} </li>
+                                <li> {{ album.genre }} </li>
 
-                                <li>{{ album.title }} </li>
-                                <li>{{ album.author }} </li>
-                                <li>{{ album.year }} </li>
-                                <li>{{ album.genre }} </li>
+                            </ul>
 
-
-
-    
-                                <!-- <img src="$item['poster']?>" alt="">
-                                <h3>$item['title']</h3>
-                                <span class="d-block" >$item['author']</span>
-                                <span class="d-block" >$item['year']</span> 
-                                <span class="d-block" >$item['genre']</span> -->
-                            
-                                </ul>
                         </div>
     
             </div>
     
         </main>
-    
-    
 
-
-
-
-
-
-
-
-
+    <!-- #APP -->
     </div>
 
 
-    <h1>bregeretbgvewtvfte</h1>
 
-
-
-
-
-
-
-    
     <!-- AXIOS -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <!-- JS -->
-    <script src="main.js"></script>
+    <script src="../js/main.js"></script>
 
 </body>
 
