@@ -1,0 +1,24 @@
+/* GENERAL RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+h1 {
+    color: red;
+}
+
+.card {
+    background-color: lightblue;
+}
+
+.img-container {
+    width: 3rem;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+}
